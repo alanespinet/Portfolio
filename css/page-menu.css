@@ -1,29 +1,27 @@
-@keyframes animate_header_menu {
-    from {opacity: 0; top: -120px; }
-    to {opacity: 1; top: 0; }
+.showed {
+  opacity: 1;
 }
 
-#header-menu ul {
+.unshowed {
+  opacity: 0;
+}
+
+#page-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-#header-menu {
-  opacity: 0;
-  background-color: rgba(189, 189, 189, .6);
+#page-menu {
+  width: 100%;
+  position: fixed;
+  background-color: #ede7f6;
 
-  animation-name: animate_header_menu;
-  animation-duration: 3s;
-  animation-delay: .3s;
-  animation-fill-mode: forwards;
-
-  position: relative;
-  top: -120px;
-  z-index: 20;
+  z-index: 30;
+  transition: all .3s ease;
 }
 
-#header-menu li {
+#page-menu li {
   float: right;
   font-family: 'Oxygen', sans-serif;
   font-size: 1.3rem;
@@ -33,32 +31,32 @@
   font-weight: 100;
 }
 
-#header-menu li:hover {
+#page-menu li:hover {
   cursor: pointer;
   background-color: rgba(220, 220, 220, .4);
   padding-top: 30px;
 }
 
-#header-menu::after {
+#page-menu::after {
   display: table;
   content: "";
   clear: both;
 }
 
 @media (min-width: 660px) {
-  #header-menu li {
+  #page-menu li {
     font-size: 1.3rem;
   }
 }
 
 @media (min-width: 1100px) {
-  #header-menu li {
+  #page-menu li {
     font-size: 1.6rem;
   }
 }
 
 @media (min-width: 1500px) {
-  #header-menu li {
+  #page-menu li {
     font-size: 2rem;
   }
 }
